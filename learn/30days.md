@@ -36,7 +36,26 @@ linux命令与shell脚本总结
 算法与数据结构大总结
 
 
+### perfect-note
+分为几部分note、点子、备忘
+关键的支持：markdown、图片、xmind
+重要的：手机、云、电脑同步
+支持迅速的检索功能
 
+* note：完整的总结
+* 点子：
+* 备忘：
+
+
+### insteresting code
+* android 自动拼模仿app
+* ml——自动生成诗词
+* ml——自动生成音乐
+* ml——自动生成画
+* ml——自动生成论文
+
+
+### 
 * HMM实现代码
 * 树与图相关数据结构
 * stanford课件
@@ -48,11 +67,13 @@ linux命令与shell脚本总结
 
 
 今日计划：
-* 英文名
-* github小号，上传note
-* github使用
 * jyputer
 * RNN应用 seq2seq
 * CS224 课程设计
 * 自动表单脚本
 * AWS处理
+* 爬虫图片 robots.txt
+
+明日关键：
+改简历，投offer
+
