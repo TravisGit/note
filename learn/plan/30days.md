@@ -56,7 +56,7 @@ linux命令与shell脚本总结
 
 
 ### 
-* HMM实现代码
+* HMM、vertebi实现代码
 * 树与图相关数据结构
 * stanford课件
 * tensorflow RNN 学习
@@ -72,8 +72,11 @@ linux命令与shell脚本总结
 * CS224 课程设计
 * 自动表单脚本
 * AWS处理
-* 爬虫图片 robots.txt
+* 爬虫图片 robots.txt是针对搜索引擎的君子协定
 
 明日关键：
 改简历，投offer
+Java、C++、python中常见容器的实现原理（vector、hashmap等）
+树与图的常见算法
+http协议、TCP/UDP基础知识
 

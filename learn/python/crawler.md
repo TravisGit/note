@@ -7,6 +7,7 @@
     - [scrapy框架](#scrapy框架)
         - [资料](#资料)
         - [应用举例](#应用举例)
+        - [改进](#改进)
         - [解析器](#解析器)
         - [如何编写spider](#如何编写spider)
         - [如何设置停止条件](#如何设置停止条件)
@@ -286,7 +287,8 @@ ITEM_PIPELINES = {
 
 **截止到此，我们可以将jiandan网上的图抓取到本地了**，而实际上在这个简单的项目中是不需要用到pipeline的，直接在spider中将图片下载保存也做了就行。
 
-
+### 改进
+按照scrapy-example中的例子来实现
 
 ### 解析器
 
@@ -319,11 +321,13 @@ Scrapy并未使用上述两种方式（当然我们也可以用），而是使�
 ### 如何编写spider
 在spider的编写中，关键是如何解析response数据，可以在scrapy shell的环境中，先使用交互式方式测试解析代码：https://doc.scrapy.org/en/latest/intro/tutorial.html
 
-1. 进入交互式环境
+1. 打开网页，鼠标右键点击想要获取的元素，如图片，点击菜单中的审查，会进入web开发模式，显示出该元素在网页中的源码，基于此就可以开始解析
+
+2. 进入交互式环境
 
 scrapy shell http://jandan.net/ooxx
 
-2. 可以看到我们能够执行的操作有：
+3. 可以看到我们能够执行的操作有：
 ```python
 [s] Available Scrapy objects:
 [s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
