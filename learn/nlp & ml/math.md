@@ -149,3 +149,20 @@ np.cov(x,y,rowvar=False)得到的结果是[[C_xx, Cyx], [C_xy, C_yy]]所组成�
 https://www.zhihu.com/question/41252833
 
 可用于作为损失函数
+
+
+### 凸函数
+知乎上GerYoung的回答：https://www.zhihu.com/question/22125449
+
+凸优化特点：
+* 单峰函数，因此局部最优就是全局最优
+* 凸优化问题，有很强的约束条件，所以可以通过newton或梯度下降法快速求解
+
+凸优化与深度学习与机器学习：
+* 只有很少部分问题，是凸优化
+* 非凸优化问题，可尝试转化为凸优化问题
+* 通常查看损失函数是否为为凸函数，来判定问题是否为凸优化
+
+![交集](https://pic3.zhimg.com/ceaf4e8ef39d8f80d4a700c5ed372532_b.jpg)
+
+

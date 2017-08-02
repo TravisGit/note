@@ -132,6 +132,10 @@ RNN的基本算法
 * 隐藏层$s_t=f(Ux_t+Ws_{(t-1)})$，通常函数f会选择tanh或者ReLU，$s_t−1$是前一时刻的隐藏状态，当t=0时，s−1通常被初始化为0向量；
 * 输出$O_t=Softmax(Vs_t)$
 
+从源码更容易理解：https://github.com/pangolulu/rnn-from-scratch：一个句子是一个batch，句子中的一个词是一个sample
+* 当每个batch作为一个输入矩阵，RNN由于k个sample的计算依赖于k-1个sample，因此同一个batch内无法并行？
+* DNN网络在batch之间如何并行？
+
 * The Unreasonable Effectiveness of Recurrent Neural Networks:  http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
 * char-RNN:http://jaybeka.github.io/2016/05/18/rnn-intuition-practice/

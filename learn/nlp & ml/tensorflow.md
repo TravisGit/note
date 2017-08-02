@@ -7,6 +7,9 @@ github：
 * 示例model：https://github.com/tensorflow/models
 * tutorials源码：https://github.com/tensorflow/models/tree/master/tutorials
 * tutorials minst 源码：
+* https://github.com/zzw922cn/Automatic_Speech_Recognition
+* https://www.tensorflow.org/extras/candidate_sampling.pdf
+* 持续集成：https://ci.tensorflow.org/view/Nightly/job/nightly-android/
 
 
 ## 基本概念
@@ -90,3 +93,32 @@ with tf.Session() as sess:
   ...
 ```
 
+
+
+## 遇到问题
+* 安装成功后，在import tensorflow时报错：
+```
+ImportError: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.17' not found (required by /usr/local/lib/python2.7/dist-packages/tensorflow/python/_pywrap_tensorflow.so)
+```
+
+[stackoverflow](https://stackoverflow.com/questions/33655731/error-while-importing-tensorflow-in-python2-7-in-ubuntu-12-04-glibc-2-17-not-f)上有解决方案：
+```bash
+$ cd /home/jty/neffos/libc6_2.17-0ubuntu5_amd64/
+$ wget http://launchpadlibrarian.net/137699828/libc6_2.17-0ubuntu5_amd64.deb        #网络不好可能导致下载内容为0字节，后面解压失败
+$ wget http://launchpadlibrarian.net/137699829/libc6-dev_2.17-0ubuntu5_amd64.deb
+$ mkdir libc6_2.17
+$ cd libc6_2.17
+$ ar p ../libc6_2.17-0ubuntu5_amd64.deb data.tar.gz | tar zx                        #这里sudo也执行不了，sudo -s切换到root执行
+$ ar p ../libc6-dev_2.17-0ubuntu5_amd64.deb data.tar.gz | tar zx
+$ cd -
+$ LD_LIBRARY_PATH=/home/jty/neffos/libc6_2.17-0ubuntu5_amd64/lib/x86_64-linux-gnu/ /home/jty/neffos/libc6_2.17-0ubuntu5_amd64/lib/x86_64-linux-gnu/ld-2.17.so `which python`    #打开python交互式窗口
+```
+
+## 文本分类
+CNN：
+* 每个词被表示为1*k的向量
+* 每个句子被表示为m*k矩阵，m为句子长度
+* 输入：m*k矩阵
+
+seq2seq
+http://suriyadeepan.github.io/2016-06-28-easy-seq2seq/

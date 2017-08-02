@@ -799,6 +799,21 @@ asyncio实现了TCP、UDP、SSL等协议，aiohttp则是基于asyncio实现的HT
 Python对函数式编程提供部分支持。由于Python允许使用变量，因此，Python不是纯函数式编程语言。
 
 
+## 函数重载
+不支持函数重载，因为可变参数列表已经可以解决这个需求了
+>>> def f1(x):
+...     return x
+... 
+>>> def f1(x,y):
+...     return x+y
+... 
+>>> f1(11)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: f1() missing 1 required positional argument: 'y'
+
+
+
 
 ## 
 
